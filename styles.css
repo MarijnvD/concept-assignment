@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto&display=swap');
+
+:root {
+    --main-bg-color: #4845E4;
+    --special-text-color: white;
+    --standard-text-color: black;
+    --accent-color:#5722CD;
+    --button-color:#ED4385;
+    --light-accent-color:#F2F0FF;
+    --project-background:#F3F6F9;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    /*background: yellow;*/
+}
+
+h1, h2, h3, h4{
+    font-family: 'Merriweather', sans-serif;;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    width: 1540px;
+    padding: 20px;
+    background-color:var(--main-bg-color);
+    color:var(--special-text-color);
+    background-image: url("assets/noise-texture.png");
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    color:white;
+    list-style: none;
+    column-gap: 100px;}
+
+header nav ul a:link{
+    text-decoration: none;
+    color:white;
+}
+header nav ul a:visited{
+    text-decoration: none;
+    color:white;
+}
+
+button{
+    display:flex;
+    justify-content: center;
+    margin: 10px;
+    background-color:var(--button-color);
+    border-radius: 50px;
+    width: 200px;
+    padding: 10px;
+}
+
+#button{
+    display: flex;
+    justify-content: center;
+}
+
+#about-us h3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--main-bg-color);
+}
+
+#about-us p{
+    text-align: center;
+    font-size: smaller;
+    color:black;
+}
+
+#about-us a:link,#about-us a:visited{
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+
+#case-studies{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:800px;
+    /*background: #ED4385;*/
+}
+
+.projects{
+    display: flex;
+    background: white;
+    width: 1000px;
+    margin: 20px;
+    align-items: center;
+}
+
+.projects-rev{
+    display: flex;
+    background: white;
+    flex-direction: row-reverse;
+    width: 900px;
+    margin: 20px;
+}
+
+.projects .project-img{
+    width: 300px;
+    height: 200px;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    margin: 20px;
+}
+
+.projects-rev .project-img{
+    width: 300px;
+    height: 200px;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    margin: 20px;
+}
+
+#services{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: yellow;
+    width: auto;
+}
+
+#services img{
+    height: 75px;
+    width: 75px;
+}
+
+#services article{
+    width: 325px;
+    height: 300px;
+    border: 1px solid blue;
+    margin:20px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+}
+
+
+
+
