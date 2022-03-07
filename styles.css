@@ -4,47 +4,53 @@
     --clr-bg: #4845E4;
     --clr-bg-light:#F3F6F9;
     --clr-special-text: white;
-    --clr-standard-text: black;
+    --clr-standard-text: #0C0C0C;
     --clr-accent:#5722CD;
     --clr-accent-light:#F2F0FF;
     --clr-button:#ED4385;
-
+    --clr-serice-tile: #7A7A7A;
     --ff-header:'Merriweather', sans-serif;
     --ff-body: 'Roboto', sans-serif;
 }
 
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
 * {
     box-sizing: border-box;
-    /*!*margin: 0;*!*/
+    margin: 0;
 }
+
+/* ------------------------------- 2. Typography ----------------------------------- */
 
 body {
     font-family: var(--ff-body);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%
 }
 
 h1, h2, h3, h4 {
     font-family: var(--ff-header);
 }
 
-header {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 2560px;
-    width: 100%;
-    flex-shrink: 1;
-    flex-direction: column;
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+.content-container {
+    width: 600px;
     text-align: center;
-    padding: 20px;
+    padding: 50px 10px 10px 10px;
+}
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Navigation ------------------- */
+
+nav {
+    width: 100%;
     background-color:var(--clr-bg);
     color:var(--clr-special-text);
     background-image: url("assets/noise-texture.png");
+    padding: 20px;
 }
 
-header nav ul {
+nav ul {
     display: flex;
     flex-shrink: 1;
     justify-content: flex-end;
@@ -53,14 +59,35 @@ header nav ul {
     column-gap: 100px;
 }
 
-header nav ul a:link{
+nav ul a:link{
     text-decoration: none;
     color:white;
 }
 
-header nav ul a:visited {
+nav ul a:visited {
     text-decoration: none;
     color:white;
+}
+
+/* --------------- 4.2 Header ------------------- */
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-shrink: 1;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    background-color:var(--clr-bg);
+    color:var(--clr-special-text);
+    background-image: url("assets/noise-texture.png");
+    position: relative;
+    padding: 0px 40px 175px 40px
+}
+
+header p {
+    padding:10px;
 }
 
 button {
@@ -78,17 +105,23 @@ button {
     justify-content: center;
 }
 
-#about-us h3 {
+/* --------------- 4.3 About us ------------------- */
+
+#about-us {
     display: flex;
     justify-content: center;
-    text-align: center;
     color: var(--clr-bg);
 }
 
+#about-us h3 {
+    padding:10px;
+}
+
+
 #about-us p {
-    text-align: center;
     font-size: smaller;
     color:black;
+    padding: 50px
 }
 
 #about-us a:link,#about-us a:visited {
@@ -96,48 +129,65 @@ button {
     text-decoration: none;
 }
 
+/* --------------- 4.4 case Studies ------------------- */
+
 #case-studies {
     display: flex;
-    justify-content: center;
-    max-width: 2560px;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
     background: var(--clr-bg-light);
 }
 
 .projects {
     display: flex;
-    background: white;
+    background: var(--clr-bg-light);
     flex-wrap: nowrap;
-    max-width: 770px;
-    margin: 20px;
-    align-items: center;
-    padding: 15px;
+    max-width: 1000px;
+    margin: 30px;
     gap: 10px;
+}
+
+.projects-text {
+    padding: 30px;
+}
+
+.projects p {
+    margin: 20px 20px 20px 0;
+}
+
+.projects h4 {
+    margin: 10px 0 10px 0;
 }
 
 .rev {
     flex-direction: row-reverse;
 }
 
-.projects .project-img {
-    width: 300px;
-    height: 200px;
+.project-img {
+    width: 700px;
+    height: 350px;
     box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-    margin: 10px;
 }
 
-.projects-rev .project-img {
-    width: 300px;
-    height: 200px;
+.projects-rev {
+    width: 500px;
+    height: 250px;
     box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
     margin: 20px;
+}
+
+/* --------------- 4.5 Services ------------------- */
+.services {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 50px 0;
 }
 
 #services {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: auto;
+    max-width: 1200px;
 }
 
 #services img {
@@ -147,13 +197,96 @@ button {
 
 #services article {
     width: 325px;
-    height: 350px;
+    height: 325px;
     border: 1px solid blue;
     margin:20px;
     padding: 20px;
     box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
 }
 
+#services h4 {
+    color: var(--clr-accent);
+    margin: 0 0 15px 0;
+}
 
+#services p {
+    font-size: smaller
+}
 
+/* --------------- 4.6 Contact us ------------------- */
+
+#contact-us {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    background-color:var(--clr-bg);
+    color:var(--clr-special-text);
+}
+
+#contact-us h2 {
+    margin: 80px 0 10px 0;
+    font-size: 30px;
+}
+
+#contact-us p {
+    margin: 10px 0 20px 0;
+    font-size: smaller;
+}
+
+#contact-us form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 10px 0 40px 0
+}
+
+#contact-us input{
+    width: 100%;
+    height: 40px;
+    margin: 0 0 20px 0;
+
+}
+
+#contact-us textarea {
+    width: 100%;
+}
+
+#contact-us button {
+    align-self: center;
+    padding: 15px;
+    color: white;
+    width: 150px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+#contact-us label {
+    font-size: smaller;
+}
+
+/* --------------- 4.7 Footer ------------------- */
+
+footer {
+    background: black ;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding:15px;
+    font-size: 9px;
+}
+
+/* --------------- 4.8 Artwork ------------------- */
+
+.squiggle {
+    height: 100px;
+    width: 50px;
+    position: absolute;
+    left: calc(50% - 30px);
+    bottom: 0;
+}
 
