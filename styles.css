@@ -1,3 +1,5 @@
+/* ------------------------------- 0. Imports & Variables -------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto&display=swap');
 
 :root {
@@ -8,7 +10,7 @@
     --clr-accent:#5722CD;
     --clr-accent-light:#F2F0FF;
     --clr-button:#ED4385;
-    --clr-serice-tile: #7A7A7A;
+    --clr-service-tile: #7A7A7A;
     --ff-header:'Merriweather', sans-serif;
     --ff-body: 'Roboto', sans-serif;
 }
@@ -18,6 +20,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- */
@@ -111,6 +114,8 @@ button {
     display: flex;
     justify-content: center;
     color: var(--clr-bg);
+    position: relative;
+    padding: 100px 10px 100px 10px;
 }
 
 #about-us h3 {
@@ -136,15 +141,18 @@ button {
     align-items: center;
     flex-direction: column;
     background: var(--clr-bg-light);
+    position: relative;
+    z-index: 1;
+    padding: 150px 10px 150px 10px;
 }
 
 .projects {
     display: flex;
-    background: var(--clr-bg-light);
     flex-wrap: nowrap;
     max-width: 1000px;
     margin: 30px;
     gap: 10px;
+    padding: 40px 0 70px 0;
 }
 
 .projects-text {
@@ -173,14 +181,16 @@ button {
     width: 500px;
     height: 250px;
     box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-    margin: 20px;
+    margin: 10px;
 }
 
 /* --------------- 4.5 Services ------------------- */
 .services {
     display: flex;
     justify-content: center;
-    margin: 50px 0 50px 0;
+    padding: 150px 10px 150px 10px;
+    position: relative;
+    z-index: 1;
 }
 
 #services {
@@ -201,7 +211,9 @@ button {
     border: 1px solid blue;
     margin:20px;
     padding: 20px;
+    background: white;
     box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+
 }
 
 #services h4 {
@@ -290,3 +302,64 @@ footer {
     bottom: 0;
 }
 
+.border-blue::after {
+    content: "";
+    position: absolute;
+    border-bottom: 40px solid var(--clr-bg);
+    border-right: 100vw solid transparent;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.border-white::after {
+    content: "";
+    position: absolute;
+    border-bottom: 40px solid white;
+    border-right: 100vw solid transparent;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.border-grey::after {
+    content: "";
+    position: absolute;
+    border-bottom: 40px solid var(--clr-bg-light);
+    border-right: 100vw solid transparent;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.service-art::after {
+    content: "services";
+    position: absolute;
+    font-size: 250px;
+    left: calc(50% - 450px);
+    bottom: calc(50% + 270px);
+    z-index: -1;
+    opacity: 0.1;
+    color: var(--clr-accent);
+}
+
+.hello-art::after {
+    content: "hello";
+    position: absolute;
+    font-size: 300px;
+    left: calc(50% - 310px);
+    bottom: calc(50% - 150px);
+    z-index: -1;
+    color: var(--clr-bg);
+    opacity: 0.1;
+}
+
+.work-art::after {
+    content: "work";
+    position: absolute;
+    font-size: 400px;
+    left: calc(50% - 400px);
+    bottom: calc(50% + 470px);
+    z-index: -1;
+    color: white;
+}
